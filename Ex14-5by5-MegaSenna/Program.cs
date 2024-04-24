@@ -3,9 +3,9 @@
 int[] numbers = new int[size];
 int[] ordered = new int[size];
 
-bool repeated = false;
-
 int lastOccurrence, minor, aux, higher, count;
+
+bool repeated;
 
 do
 {
@@ -16,7 +16,7 @@ do
         do
         {
             repeated = false;
-            aux = new Random().Next(1, 60);
+            aux = new Random().Next(1, 61);
        
             for (int j = 0; j < i; j++)
             {
@@ -29,6 +29,7 @@ do
     }
 
     minor = numbers[0];
+
     for (int i = 0; i < size; i++)
     {
         if (numbers[i] < minor)
@@ -67,7 +68,7 @@ do
         ordered[count++] = numbers[minor];
     }
 
-    Console.WriteLine("\n---- Senna Numbers ----\n");
+    Console.WriteLine("\n---- Sena Numbers ----\n");
 
     for (int i = 0; i < size; i++)
         Console.Write(ordered[i] + " ");
